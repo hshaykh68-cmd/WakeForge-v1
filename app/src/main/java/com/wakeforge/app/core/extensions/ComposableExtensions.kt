@@ -53,7 +53,7 @@ fun Modifier.pulseAnimation(
         initialValue = minAlpha,
         targetValue = maxAlpha,
         animationSpec = infiniteRepeatable(
-            animation = tween(durationMs = durationMs, easing = FastOutSlowInEasing),
+            animation = tween(durationMillis = durationMs, easing = FastOutSlowInEasing),
             repeatMode = RepeatMode.Reverse,
         ),
         label = "pulseAlpha",
@@ -63,7 +63,7 @@ fun Modifier.pulseAnimation(
         initialValue = minScale,
         targetValue = maxScale,
         animationSpec = infiniteRepeatable(
-            animation = tween(durationMs = durationMs, easing = FastOutSlowInEasing),
+            animation = tween(durationMillis = durationMs, easing = FastOutSlowInEasing),
             repeatMode = RepeatMode.Reverse,
         ),
         label = "pulseScale",

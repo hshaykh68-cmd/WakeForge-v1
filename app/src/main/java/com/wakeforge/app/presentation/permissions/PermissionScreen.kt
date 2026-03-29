@@ -20,7 +20,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.BatteryChargingFull
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Notifications
@@ -92,7 +92,7 @@ fun PermissionScreen(
         // Top bar with back button
         WFTopBar(
             title = "Permission Setup",
-            navigationIcon = Icons.AutoMirrored.Filled.ArrowBack,
+            navigationIcon = Icons.Default.ArrowBack,
             onNavigationClick = { navController.popBackStack() },
         )
 

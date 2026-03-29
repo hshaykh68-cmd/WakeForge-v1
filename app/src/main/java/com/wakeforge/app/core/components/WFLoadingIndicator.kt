@@ -70,11 +70,11 @@ fun WFLoadingIndicator(
         contentAlignment = Alignment.Center,
     ) {
         Canvas(modifier = Modifier.matchParentSize()) {
-            val arcSize = size.minDimension
+            val arcSize = this.size.minDimension
             val strokeWidth = arcSize * 0.1f
             val topLeft = Offset(
-                x = (size.width - arcSize) / 2f,
-                y = (size.height - arcSize) / 2f,
+                x = (this.size.width - arcSize) / 2f,
+                y = (this.size.height - arcSize) / 2f,
             )
 
             // Track (background circle)

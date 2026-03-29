@@ -12,11 +12,11 @@ import java.util.UUID
  * @property timeLimitMs Time limit in milliseconds (0 if not timed).
  */
 sealed class Mission(
-    val id: String = UUID.randomUUID().toString(),
-    val type: MissionType,
-    val difficulty: MissionDifficulty,
-    val isTimed: Boolean = true,
-    val timeLimitMs: Long = 0L
+    open val id: String = UUID.randomUUID().toString(),
+    open val type: MissionType,
+    open val difficulty: MissionDifficulty,
+    open val isTimed: Boolean = true,
+    open val timeLimitMs: Long = 0L
 ) {
 
     /**

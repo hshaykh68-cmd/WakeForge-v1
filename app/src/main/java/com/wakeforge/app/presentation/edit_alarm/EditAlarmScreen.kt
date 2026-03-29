@@ -21,12 +21,12 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -144,7 +144,7 @@ fun EditAlarmScreen(
         topBar = {
             WFTopBar(
                 title = "Edit Alarm",
-                navigationIcon = Icons.AutoMirrored.Filled.ArrowBack,
+                navigationIcon = Icons.Default.ArrowBack,
                 onNavigationClick = { navController.popBackStack() },
                 actions = listOf(
                     TopBarAction(
@@ -505,7 +505,7 @@ fun EditAlarmScreen(
 
                             if (state.strictModeEnabled) {
                                 Spacer(modifier = Modifier.height(12.dp))
-                                HorizontalDivider(color = colors.border, thickness = 1.dp)
+                                Divider(color = colors.border, thickness = 1.dp)
                                 Spacer(modifier = Modifier.height(12.dp))
 
                                 Row(
