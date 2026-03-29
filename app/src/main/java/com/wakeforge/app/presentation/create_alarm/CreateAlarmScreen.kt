@@ -84,10 +84,11 @@ fun CreateAlarmScreen(
     navController: NavController,
     viewModel: CreateAlarmViewModel = hiltViewModel(),
 ) {
-    val state by viewModel.uiState
+    val state by viewModel.uiState.collectAsStateWithLifecycle()
     val colors = LocalWakeForgeColors.current
     val typography = LocalWakeForgeTypography.current
     val snackbarHostState = remember { SnackbarHostState() }
+    val scope = rememberCoroutineScope()
 
     val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior(
         rememberTopAppBarState()
@@ -100,7 +101,9 @@ fun CreateAlarmScreen(
                 navController.popBackStack()
             }
             is CreateAlarmViewModel.CreateAlarmEvent.SaveError -> {
-                snackbarHostState.showSnackbar(event.message)
+                scope.launch {
+                    snackbarHostState.showSnackbar(event.message)
+                }
             }
         }
     }
@@ -260,7 +263,7 @@ fun CreateAlarmScreen(
 
                         Spacer(modifier = Modifier.height(16.dp))
 
-                        Divider(
+                        HorizontalDivider(
                             color = colors.border,
                             thickness = 1.dp,
                         )

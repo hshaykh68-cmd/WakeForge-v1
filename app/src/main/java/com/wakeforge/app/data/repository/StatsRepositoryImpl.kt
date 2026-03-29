@@ -265,9 +265,9 @@ class StatsRepositoryImpl @Inject constructor(
         return successCount.toFloat() / totalCount.toFloat()
     }
 
-    private inline fun <reified T : Enum<T>> safeValueOf(enumClass: KClass<T>, name: String): T? {
+    private fun <T : Enum<T>> safeValueOf(enumClass: Class<T>, name: String): T? {
         return try {
-            java.lang.Enum.valueOf(enumClass.java, name)
+            java.lang.Enum.valueOf(enumClass, name)
         } catch (e: IllegalArgumentException) {
             null
         }

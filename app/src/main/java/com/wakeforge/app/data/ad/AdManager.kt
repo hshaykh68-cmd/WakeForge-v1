@@ -182,7 +182,7 @@ class AdManager @Inject constructor() {
         isRewardedLoading = true
         val adRequest = AdRequest.Builder().build()
 
-        RewardedAd.load(activity, rewardedAdUnitId, adRequest, object : RewardedAdLoadCallback() {
+        RewardedAd.load(activity.applicationContext, rewardedAdUnitId, adRequest, object : RewardedAdLoadCallback() {
             override fun onAdFailedToLoad(adError: LoadAdError) {
                 rewardedAd = null
                 isRewardedLoading = false

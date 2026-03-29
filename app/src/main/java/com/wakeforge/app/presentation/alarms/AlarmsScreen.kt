@@ -88,17 +88,15 @@ fun AlarmsScreen(
     // Show undo snackbar when a delete is staged
     LaunchedEffect(uiState.showDeleteUndo) {
         if (uiState.showDeleteUndo) {
-            val result = coroutineScope.launch {
-                snackbarHostState.showSnackbar(
+            coroutineScope.launch {
+                val result = snackbarHostState.showSnackbar(
                     message = "Alarm deleted",
                     actionLabel = "Undo",
                     duration = SnackbarDuration.Short,
                 )
-            }
-            if (result == SnackbarResult.ActionPerformed) {
-                viewModel.undoDelete()
-            } else {
-                // User dismissed; permanent delete will happen via the timer
+                if (result == SnackbarResult.ActionPerformed) {
+                    viewModel.undoDelete()
+                }
             }
         }
     }

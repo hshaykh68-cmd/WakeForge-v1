@@ -35,7 +35,7 @@ class AlarmScheduler @Inject constructor(
 
     fun scheduleAlarm(alarm: Alarm) {
         val nextFireTime = calculateNextFireTime(alarm) ?: return
-        scheduleAlarmAtTime(alarm.id, nextFireTime)
+        scheduleAlarmAtTime(alarm.id, nextFireTime.toEpochMilli())
 
         Log.d(
             TAG,

@@ -1,5 +1,5 @@
 Run unit tests
-45s
+44s
 
 
 
@@ -7,38 +7,14 @@ Show command
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
 Configuration on demand is an incubating feature.
-Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
-Checking the license for package Android SDK Build-Tools 34 in /usr/local/share/android-sdk/licenses
-License for package Android SDK Build-Tools 34 accepted.
-Preparing "Install Android SDK Build-Tools 34 v.34.0.0".
-"Install Android SDK Build-Tools 34 v.34.0.0" ready.
-Installing Android SDK Build-Tools 34 in /usr/local/share/android-sdk/build-tools/34.0.0
-"Install Android SDK Build-Tools 34 v.34.0.0" complete.
-"Install Android SDK Build-Tools 34 v.34.0.0" finished.
-> Task :app:preBuild UP-TO-DATE
-> Task :app:preDebugBuild UP-TO-DATE
-> Task :app:checkKotlinGradlePluginConfigurationErrors
-> Task :app:generateDebugBuildConfig
-> Task :app:generateDebugResValues
-> Task :app:checkDebugAarMetadata
-> Task :app:mapDebugSourceSetPaths
-> Task :app:generateDebugResources
-> Task :app:packageDebugResources
-> Task :app:createDebugCompatibleScreenManifests
-> Task :app:mergeDebugResources
-> Task :app:extractDeepLinksDebug
-> Task :app:parseDebugLocalResources
-> Task :app:processDebugMainManifest
-> Task :app:processDebugManifest
-> Task :app:preDebugUnitTestBuild UP-TO-DATE
-> Task :app:javaPreCompileDebug
-> Task :app:javaPreCompileDebugUnitTest
-> Task :app:processDebugManifestForPackage
-> Task :app:processDebugResources
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
 Configuration on demand is an incubating feature.
 Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+Checking the license for package Android SDK Build-Tools 34 in /usr/local/share/android-sdk/licenses
+License for package Android SDK Build-Tools 34 accepted.
+Preparing "Install Android SDK Build-Tools 34 v.34.0.0".
 Checking the license for package Android SDK Build-Tools 34 in /usr/local/share/android-sdk/licenses
 License for package Android SDK Build-Tools 34 accepted.
 Preparing "Install Android SDK Build-Tools 34 v.34.0.0".
@@ -54,17 +30,41 @@ Installing Android SDK Build-Tools 34 in /usr/local/share/android-sdk/build-tool
 > Task :app:checkDebugAarMetadata
 > Task :app:mapDebugSourceSetPaths
 > Task :app:generateDebugResources
+"Install Android SDK Build-Tools 34 v.34.0.0" ready.
+Installing Android SDK Build-Tools 34 in /usr/local/share/android-sdk/build-tools/34.0.0
+"Install Android SDK Build-Tools 34 v.34.0.0" complete.
+"Install Android SDK Build-Tools 34 v.34.0.0" finished.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :app:generateDebugBuildConfig
+> Task :app:generateDebugResValues
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
 > Task :app:packageDebugResources
 > Task :app:createDebugCompatibleScreenManifests
-> Task :app:mergeDebugResources
 > Task :app:extractDeepLinksDebug
+> Task :app:mergeDebugResources
+> Task :app:parseDebugLocalResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:packageDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:mergeDebugResources
 > Task :app:parseDebugLocalResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
 > Task :app:preDebugUnitTestBuild UP-TO-DATE
-> Task :app:javaPreCompileDebug
 > Task :app:javaPreCompileDebugUnitTest
 > Task :app:processDebugManifestForPackage
+> Task :app:javaPreCompileDebug
+> Task :app:processDebugResources
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:processDebugManifestForPackage
+> Task :app:javaPreCompileDebug
 > Task :app:processDebugResources
 > Task :app:kspDebugKotlin
 > Task :app:kspDebugKotlin
@@ -74,14 +74,8 @@ Installing Android SDK Build-Tools 34 in /usr/local/share/android-sdk/build-tool
 > Task :app:kaptDebugKotlin
 
 > Task :app:compileDebugKotlin FAILED
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/components/WFLoadingIndicator.kt:73:32 Unresolved reference: minDimension
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/components/WFLoadingIndicator.kt:76:27 Unresolved reference: width
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/components/WFLoadingIndicator.kt:77:27 Unresolved reference: height
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/components/WFTopBar.kt:11:40 Unresolved reference: automirrored
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/extensions/ComposableExtensions.kt:52:18 Type 'State<Float>' has no method 'getValue(Nothing?, KProperty<*>)' and thus it cannot serve as a delegate
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/extensions/ComposableExtensions.kt:56:31 Cannot find a parameter with this name: durationMs
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/extensions/ComposableExtensions.kt:62:18 Type 'State<Float>' has no method 'getValue(Nothing?, KProperty<*>)' and thus it cannot serve as a delegate
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/extensions/ComposableExtensions.kt:66:31 Cannot find a parameter with this name: durationMs
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/extensions/ComposableExtensions.kt:119:23 Type 'State<Float>' has no method 'getValue(Nothing?, KProperty<*>)' and thus it cannot serve as a delegate
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/extensions/FlowExtensions.kt:8:35 Unresolved reference: LocalLifecycleOwner
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/extensions/FlowExtensions.kt:63:26 Unresolved reference: LocalLifecycleOwner
@@ -115,31 +109,6 @@ e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/data/sound/So
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/data/sound/SoundManager.kt:141:34 Unresolved reference: R
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/data/sound/SoundManager.kt:153:68 Unresolved reference: R
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/data/sound/SoundManager.kt:159:86 Unresolved reference: R
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:28:9 'id' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:29:9 'type' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:30:9 'difficulty' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:31:9 'isTimed' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:32:9 'timeLimitMs' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:44:9 'id' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:45:9 'type' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:46:9 'difficulty' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:47:9 'isTimed' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:48:9 'timeLimitMs' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:61:9 'id' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:62:9 'type' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:63:9 'difficulty' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:64:9 'isTimed' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:65:9 'timeLimitMs' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:78:9 'id' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:79:9 'type' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:80:9 'difficulty' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:81:9 'isTimed' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:82:9 'timeLimitMs' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:106:9 'id' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:107:9 'type' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:108:9 'difficulty' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:109:9 'isTimed' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:110:9 'timeLimitMs' in 'Mission' is final and cannot be overridden
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/alarm_ringing/AlarmRingingScreen.kt:78:18 Type 'StateFlow<AlarmRingingUiState>' has no method 'getValue(Nothing?, KProperty<*>)' and thus it cannot serve as a delegate
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/alarm_ringing/AlarmRingingScreen.kt:229:50 Unresolved reference: asPaddingValues
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/alarm_ringing/AlarmRingingScreen.kt:284:21 Overload resolution ambiguity: 
@@ -149,33 +118,23 @@ e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/
 public fun Text(text: AnnotatedString, modifier: Modifier = ..., color: Color = ..., fontSize: TextUnit = ..., fontStyle: FontStyle? = ..., fontWeight: FontWeight? = ..., fontFamily: FontFamily? = ..., letterSpacing: TextUnit = ..., textDecoration: TextDecoration? = ..., textAlign: TextAlign? = ..., lineHeight: TextUnit = ..., overflow: TextOverflow = ..., softWrap: Boolean = ..., maxLines: Int = ..., minLines: Int = ..., inlineContent: Map<String, InlineTextContent> = ..., onTextLayout: (TextLayoutResult) -> Unit = ..., style: TextStyle = ...): Unit defined in androidx.compose.material3
 public fun Text(text: String, modifier: Modifier = ..., color: Color = ..., fontSize: TextUnit = ..., fontStyle: FontStyle? = ..., fontWeight: FontWeight? = ..., fontFamily: FontFamily? = ..., letterSpacing: TextUnit = ..., textDecoration: TextDecoration? = ..., textAlign: TextAlign? = ..., lineHeight: TextUnit = ..., overflow: TextOverflow = ..., softWrap: Boolean = ..., maxLines: Int = ..., minLines: Int = ..., onTextLayout: (TextLayoutResult) -> Unit = ..., style: TextStyle = ...): Unit defined in androidx.compose.material3
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/alarms/AlarmsScreen.kt:98:17 Comparison of incompatible enums 'Job' and 'SnackbarResult' is always unsuccessful
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:24:40 Unresolved reference: automirrored
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:28:35 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:87:18 Type 'StateFlow<CreateAlarmViewModel.CreateAlarmUiState>' has no method 'getValue(Nothing?, KProperty<*>)' and thus it cannot serve as a delegate
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:103:35 Suspend function 'showSnackbar' should be called only from a coroutine or another suspend function
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:113:40 Unresolved reference: AutoMirrored
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:182:33 Cannot find a parameter with this name: containerColor
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:263:25 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:410:42 Type mismatch: inferred type is KFunction0<Unit> but (Boolean) -> Unit was expected
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:459:29 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:509:25 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/DifficultySelectorSection.kt:74:44 Unresolved reference: Alignment
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/TimePickerSection.kt:18:35 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/TimePickerSection.kt:156:41 Type mismatch: inferred type is Unit but FlingBehavior was expected
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/TimePickerSection.kt:173:51 Suspend function 'animateScrollToItem' should be called only from a coroutine or another suspend function
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/TimePickerSection.kt:205:41 Type mismatch: inferred type is Unit but FlingBehavior was expected
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/TimePickerSection.kt:217:53 Suspend function 'animateScrollToItem' should be called only from a coroutine or another suspend function
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/TimePickerSection.kt:227:13 Unresolved reference: HorizontalDivider
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:24:40 Unresolved reference: automirrored
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:29:35 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:93:18 Type 'StateFlow<EditAlarmViewModel.EditAlarmUiState>' has no method 'getValue(Nothing?, KProperty<*>)' and thus it cannot serve as a delegate
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:110:35 Suspend function 'showSnackbar' should be called only from a coroutine or another suspend function
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:116:35 Suspend function 'showSnackbar' should be called only from a coroutine or another suspend function
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:147:40 Unresolved reference: AutoMirrored
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:242:37 Cannot find a parameter with this name: containerColor
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:322:29 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:462:46 Type mismatch: inferred type is KFunction0<Unit> but (Boolean) -> Unit was expected
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:508:33 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:558:29 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/home/components/NextAlarmCard.kt:33:47 Unresolved reference: StrokeCap
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/home/components/QuickStatsCard.kt:28:47 Unresolved reference: StrokeCap
@@ -218,9 +177,7 @@ e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/onboarding/OnboardingScreen.kt:191:40 This foundation API is experimental and is likely to change or be removed in the future.
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/onboarding/OnboardingScreen.kt:191:60 This foundation API is experimental and is likely to change or be removed in the future.
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/onboarding/OnboardingScreen.kt:191:71 This foundation API is experimental and is likely to change or be removed in the future.
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/permissions/PermissionScreen.kt:23:40 Unresolved reference: automirrored
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/permissions/PermissionScreen.kt:93:9 This material API is experimental and is likely to change or to be removed in the future.
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/permissions/PermissionScreen.kt:95:36 Unresolved reference: AutoMirrored
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/premium/PremiumFeatureCard.kt:126:17 None of the following functions can be called with the arguments supplied: 
 public fun Text(text: AnnotatedString, modifier: Modifier = ..., color: Color = ..., fontSize: TextUnit = ..., fontStyle: FontStyle? = ..., fontWeight: FontWeight? = ..., fontFamily: FontFamily? = ..., letterSpacing: TextUnit = ..., textDecoration: TextDecoration? = ..., textAlign: TextAlign? = ..., lineHeight: TextUnit = ..., overflow: TextOverflow = ..., softWrap: Boolean = ..., maxLines: Int = ..., minLines: Int = ..., inlineContent: Map<String, InlineTextContent> = ..., onTextLayout: (TextLayoutResult) -> Unit = ..., style: TextStyle = ...): Unit defined in androidx.compose.material3
 public fun Text(text: String, modifier: Modifier = ..., color: Color = ..., fontSize: TextUnit = ..., fontStyle: FontStyle? = ..., fontWeight: FontWeight? = ..., fontFamily: FontFamily? = ..., letterSpacing: TextUnit = ..., textDecoration: TextDecoration? = ..., textAlign: TextAlign? = ..., lineHeight: TextUnit = ..., overflow: TextOverflow = ..., softWrap: Boolean = ..., maxLines: Int = ..., minLines: Int = ..., onTextLayout: (TextLayoutResult) -> Unit = ..., style: TextStyle = ...): Unit defined in androidx.compose.material3
@@ -333,6 +290,36 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:com
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:116)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:264)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:128)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
 Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
@@ -464,6 +451,36 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:116)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:264)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:128)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
 Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilation error. See log for more details
@@ -500,7 +517,7 @@ Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilat
 	... 2 more
 
 
-BUILD FAILED in 44s
+BUILD FAILED in 43s
 20 actionable tasks: 20 executed
 
 
@@ -508,14 +525,8 @@ Build failed :|
 Step 4 script `Run unit tests` exited with status code 1
 
 > Task :app:compileDebugKotlin FAILED
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/components/WFLoadingIndicator.kt:73:32 Unresolved reference: minDimension
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/components/WFLoadingIndicator.kt:76:27 Unresolved reference: width
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/components/WFLoadingIndicator.kt:77:27 Unresolved reference: height
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/components/WFTopBar.kt:11:40 Unresolved reference: automirrored
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/extensions/ComposableExtensions.kt:52:18 Type 'State<Float>' has no method 'getValue(Nothing?, KProperty<*>)' and thus it cannot serve as a delegate
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/extensions/ComposableExtensions.kt:56:31 Cannot find a parameter with this name: durationMs
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/extensions/ComposableExtensions.kt:62:18 Type 'State<Float>' has no method 'getValue(Nothing?, KProperty<*>)' and thus it cannot serve as a delegate
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/extensions/ComposableExtensions.kt:66:31 Cannot find a parameter with this name: durationMs
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/extensions/ComposableExtensions.kt:119:23 Type 'State<Float>' has no method 'getValue(Nothing?, KProperty<*>)' and thus it cannot serve as a delegate
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/extensions/FlowExtensions.kt:8:35 Unresolved reference: LocalLifecycleOwner
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/core/extensions/FlowExtensions.kt:63:26 Unresolved reference: LocalLifecycleOwner
@@ -549,31 +560,6 @@ e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/data/sound/So
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/data/sound/SoundManager.kt:141:34 Unresolved reference: R
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/data/sound/SoundManager.kt:153:68 Unresolved reference: R
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/data/sound/SoundManager.kt:159:86 Unresolved reference: R
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:28:9 'id' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:29:9 'type' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:30:9 'difficulty' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:31:9 'isTimed' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:32:9 'timeLimitMs' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:44:9 'id' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:45:9 'type' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:46:9 'difficulty' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:47:9 'isTimed' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:48:9 'timeLimitMs' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:61:9 'id' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:62:9 'type' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:63:9 'difficulty' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:64:9 'isTimed' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:65:9 'timeLimitMs' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:78:9 'id' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:79:9 'type' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:80:9 'difficulty' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:81:9 'isTimed' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:82:9 'timeLimitMs' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:106:9 'id' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:107:9 'type' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:108:9 'difficulty' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:109:9 'isTimed' in 'Mission' is final and cannot be overridden
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/domain/models/Mission.kt:110:9 'timeLimitMs' in 'Mission' is final and cannot be overridden
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/alarm_ringing/AlarmRingingScreen.kt:78:18 Type 'StateFlow<AlarmRingingUiState>' has no method 'getValue(Nothing?, KProperty<*>)' and thus it cannot serve as a delegate
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/alarm_ringing/AlarmRingingScreen.kt:229:50 Unresolved reference: asPaddingValues
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/alarm_ringing/AlarmRingingScreen.kt:284:21 Overload resolution ambiguity: 
@@ -583,33 +569,23 @@ e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/
 public fun Text(text: AnnotatedString, modifier: Modifier = ..., color: Color = ..., fontSize: TextUnit = ..., fontStyle: FontStyle? = ..., fontWeight: FontWeight? = ..., fontFamily: FontFamily? = ..., letterSpacing: TextUnit = ..., textDecoration: TextDecoration? = ..., textAlign: TextAlign? = ..., lineHeight: TextUnit = ..., overflow: TextOverflow = ..., softWrap: Boolean = ..., maxLines: Int = ..., minLines: Int = ..., inlineContent: Map<String, InlineTextContent> = ..., onTextLayout: (TextLayoutResult) -> Unit = ..., style: TextStyle = ...): Unit defined in androidx.compose.material3
 public fun Text(text: String, modifier: Modifier = ..., color: Color = ..., fontSize: TextUnit = ..., fontStyle: FontStyle? = ..., fontWeight: FontWeight? = ..., fontFamily: FontFamily? = ..., letterSpacing: TextUnit = ..., textDecoration: TextDecoration? = ..., textAlign: TextAlign? = ..., lineHeight: TextUnit = ..., overflow: TextOverflow = ..., softWrap: Boolean = ..., maxLines: Int = ..., minLines: Int = ..., onTextLayout: (TextLayoutResult) -> Unit = ..., style: TextStyle = ...): Unit defined in androidx.compose.material3
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/alarms/AlarmsScreen.kt:98:17 Comparison of incompatible enums 'Job' and 'SnackbarResult' is always unsuccessful
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:24:40 Unresolved reference: automirrored
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:28:35 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:87:18 Type 'StateFlow<CreateAlarmViewModel.CreateAlarmUiState>' has no method 'getValue(Nothing?, KProperty<*>)' and thus it cannot serve as a delegate
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:103:35 Suspend function 'showSnackbar' should be called only from a coroutine or another suspend function
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:113:40 Unresolved reference: AutoMirrored
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:182:33 Cannot find a parameter with this name: containerColor
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:263:25 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:410:42 Type mismatch: inferred type is KFunction0<Unit> but (Boolean) -> Unit was expected
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:459:29 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/CreateAlarmScreen.kt:509:25 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/DifficultySelectorSection.kt:74:44 Unresolved reference: Alignment
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/TimePickerSection.kt:18:35 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/TimePickerSection.kt:156:41 Type mismatch: inferred type is Unit but FlingBehavior was expected
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/TimePickerSection.kt:173:51 Suspend function 'animateScrollToItem' should be called only from a coroutine or another suspend function
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/TimePickerSection.kt:205:41 Type mismatch: inferred type is Unit but FlingBehavior was expected
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/TimePickerSection.kt:217:53 Suspend function 'animateScrollToItem' should be called only from a coroutine or another suspend function
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/create_alarm/TimePickerSection.kt:227:13 Unresolved reference: HorizontalDivider
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:24:40 Unresolved reference: automirrored
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:29:35 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:93:18 Type 'StateFlow<EditAlarmViewModel.EditAlarmUiState>' has no method 'getValue(Nothing?, KProperty<*>)' and thus it cannot serve as a delegate
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:110:35 Suspend function 'showSnackbar' should be called only from a coroutine or another suspend function
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:116:35 Suspend function 'showSnackbar' should be called only from a coroutine or another suspend function
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:147:40 Unresolved reference: AutoMirrored
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:242:37 Cannot find a parameter with this name: containerColor
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:322:29 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:462:46 Type mismatch: inferred type is KFunction0<Unit> but (Boolean) -> Unit was expected
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:508:33 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/edit_alarm/EditAlarmScreen.kt:558:29 Unresolved reference: HorizontalDivider
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/home/components/NextAlarmCard.kt:33:47 Unresolved reference: StrokeCap
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/home/components/QuickStatsCard.kt:28:47 Unresolved reference: StrokeCap
@@ -652,9 +628,7 @@ e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/onboarding/OnboardingScreen.kt:191:40 This foundation API is experimental and is likely to change or be removed in the future.
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/onboarding/OnboardingScreen.kt:191:60 This foundation API is experimental and is likely to change or be removed in the future.
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/onboarding/OnboardingScreen.kt:191:71 This foundation API is experimental and is likely to change or be removed in the future.
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/permissions/PermissionScreen.kt:23:40 Unresolved reference: automirrored
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/permissions/PermissionScreen.kt:93:9 This material API is experimental and is likely to change or to be removed in the future.
-e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/permissions/PermissionScreen.kt:95:36 Unresolved reference: AutoMirrored
 e: file:///Users/builder/clone/app/src/main/java/com/wakeforge/app/presentation/premium/PremiumFeatureCard.kt:126:17 None of the following functions can be called with the arguments supplied: 
 public fun Text(text: AnnotatedString, modifier: Modifier = ..., color: Color = ..., fontSize: TextUnit = ..., fontStyle: FontStyle? = ..., fontWeight: FontWeight? = ..., fontFamily: FontFamily? = ..., letterSpacing: TextUnit = ..., textDecoration: TextDecoration? = ..., textAlign: TextAlign? = ..., lineHeight: TextUnit = ..., overflow: TextOverflow = ..., softWrap: Boolean = ..., maxLines: Int = ..., minLines: Int = ..., inlineContent: Map<String, InlineTextContent> = ..., onTextLayout: (TextLayoutResult) -> Unit = ..., style: TextStyle = ...): Unit defined in androidx.compose.material3
 public fun Text(text: String, modifier: Modifier = ..., color: Color = ..., fontSize: TextUnit = ..., fontStyle: FontStyle? = ..., fontWeight: FontWeight? = ..., fontFamily: FontFamily? = ..., letterSpacing: TextUnit = ..., textDecoration: TextDecoration? = ..., textAlign: TextAlign? = ..., lineHeight: TextUnit = ..., overflow: TextOverflow = ..., softWrap: Boolean = ..., maxLines: Int = ..., minLines: Int = ..., onTextLayout: (TextLayoutResult) -> Unit = ..., style: TextStyle = ...): Unit defined in androidx.compose.material3
@@ -767,6 +741,36 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:com
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:116)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:264)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:128)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
 Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
@@ -898,6 +902,36 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:116)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:264)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:128)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
 Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilation error. See log for more details
@@ -934,7 +968,7 @@ Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilat
 	... 2 more
 
 
-BUILD FAILED in 44s
+BUILD FAILED in 43s
 20 actionable tasks: 20 executed
 
 

@@ -58,13 +58,9 @@ sealed interface Route {
     }
 
     /** Screen for editing an existing alarm. */
-    data class EditAlarm(val alarmId: String) : Route {
+    data object EditAlarm : Route {
         override val route: String = "edit_alarm/{alarmId}"
-
-        companion object {
-            /** Build a parameterised route for editing a specific alarm. */
-            fun createRoute(alarmId: String): String = "edit_alarm/$alarmId"
-        }
+        fun createRoute(alarmId: String): String = "edit_alarm/$alarmId"
     }
 
     // ──────────────────────────────────────────────────────────────────────────
@@ -72,46 +68,30 @@ sealed interface Route {
     // ──────────────────────────────────────────────────────────────────────────
 
     /** Full-screen alarm ringing display. */
-    data class AlarmRinging(val alarmId: String) : Route {
+    data object AlarmRinging : Route {
         override val route: String = "alarm_ringing/{alarmId}"
-
-        companion object {
-            fun createRoute(alarmId: String): String = "alarm_ringing/$alarmId"
-        }
+        fun createRoute(alarmId: String): String = "alarm_ringing/$alarmId"
     }
 
     /** Mission challenge screen launched during an active alarm. */
-    data class MissionChallenge(
-        val alarmId: String = "",
-        val missionType: String = "",
-        val difficulty: String = "",
-        val snoozeCount: Int = 0
-    ) : Route {
+    data object MissionChallenge : Route {
         override val route: String =
             "mission_challenge?alarmId={alarmId}&missionType={missionType}&difficulty={difficulty}&snoozeCount={snoozeCount}"
 
-        companion object {
-            fun createRoute(
-                alarmId: String,
-                missionType: String,
-                difficulty: String,
-                snoozeCount: Int
-            ): String =
-                "mission_challenge?alarmId=$alarmId&missionType=$missionType&difficulty=$difficulty&snoozeCount=$snoozeCount"
-        }
+        fun createRoute(
+            alarmId: String,
+            missionType: String,
+            difficulty: String,
+            snoozeCount: Int
+        ): String =
+            "mission_challenge?alarmId=$alarmId&missionType=$missionType&difficulty=$difficulty&snoozeCount=$snoozeCount"
     }
 
     /** Success screen shown after a wake-up mission is completed. */
-    data class WakeSuccess(
-        val alarmId: String,
-        val wakeRecordId: String
-    ) : Route {
+    data object WakeSuccess : Route {
         override val route: String = "wake_success/{alarmId}/{wakeRecordId}"
-
-        companion object {
-            fun createRoute(alarmId: String, wakeRecordId: String): String =
-                "wake_success/$alarmId/$wakeRecordId"
-        }
+        fun createRoute(alarmId: String, wakeRecordId: String): String =
+            "wake_success/$alarmId/$wakeRecordId"
     }
 
     // ──────────────────────────────────────────────────────────────────────────
