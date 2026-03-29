@@ -11,6 +11,7 @@ workflows:
     triggering:
       events:
         - push
+        - pull_request
       branch_patterns:
         - pattern: main
           include: true
@@ -18,18 +19,15 @@ workflows:
           include: true
         - pattern: feature/*
           include: true
-      pull_request:
-        - pattern: main
-          include: true
 
     environment:
       vars:
         JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
-      xcode: latest
+    
     cache:
-      paths:
-        - ~/.gradle/caches
-        - ~/.gradle/wrapper
+      - ~/.gradle/caches
+      - ~/.gradle/wrapper
+
     scripts:
       - name: Set up Java 17
         script: |
@@ -57,8 +55,7 @@ workflows:
       - build/reports/tests/
 
     publishing:
-      reports:
-        report_files: "build/reports/tests/**/TEST-*.xml"
+      report_files: build/reports/tests/**/TEST-*.xml
 
   # ==============================================================
   # Release Workflow
@@ -80,11 +77,11 @@ workflows:
     environment:
       vars:
         JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
-      xcode: latest
+    
     cache:
-      paths:
-        - ~/.gradle/caches
-        - ~/.gradle/wrapper
+      - ~/.gradle/caches
+      - ~/.gradle/wrapper
+
     scripts:
       - name: Set up Java 17
         script: |
@@ -117,5 +114,4 @@ workflows:
       - build/reports/lint-results-release.html
 
     publishing:
-      reports:
-        report_files: "build/reports/tests/**/TEST-*.xml"
+      report_files: build/reports/tests/**/TEST-*.xml
