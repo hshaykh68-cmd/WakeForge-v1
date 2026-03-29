@@ -3,6 +3,7 @@ package com.wakeforge.app.core.extensions
 import androidx.compose.animation.AnimatedVisibilityScope
 import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.ExitTransition
+import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
@@ -18,6 +19,7 @@ import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
 import androidx.compose.ui.draw.drawBehind
@@ -80,25 +82,27 @@ fun Modifier.pulseAnimation(
  * Gives tactile, material-like press feedback without ripple noise.
  */
 fun Modifier.pressEffect(): Modifier = composed {
-    val interactionScale = androidx.compose.animation.core.animateFloatAsState(
-        targetValue = 1f,
-        animationSpec = spring(dampingRatio = DefaultSpringSpec.dampingRatio, stiffness = DefaultSpringSpec.stiffness),
-        label = "pressScale",
-    )
+    val scale = remember { androidx.compose.animation.core.Animatable(1f) }
 
     this
         .pointerInput(Unit) {
             detectTapGestures(
                 onPress = {
-                    interactionScale.animateTo(0.96f)
+                    scale.animateTo(
+                        0.96f,
+                        animationSpec = spring(dampingRatio = DefaultSpringSpec.dampingRatio, stiffness = DefaultSpringSpec.stiffness)
+                    )
                     tryAwaitRelease()
-                    interactionScale.animateTo(1f)
+                    scale.animateTo(
+                        1f,
+                        animationSpec = spring(dampingRatio = DefaultSpringSpec.dampingRatio, stiffness = DefaultSpringSpec.stiffness)
+                    )
                 },
             )
         }
         .graphicsLayer {
-            scaleX = interactionScale.value
-            scaleY = interactionScale.value
+            scaleX = scale.value
+            scaleY = scale.value
         }
 }
 

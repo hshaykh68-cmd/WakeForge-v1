@@ -14,8 +14,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Analytics
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.DirectionsWalk
 import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.Palette
+import androidx.compose.material.icons.filled.Timer
+import androidx.compose.material.icons.filled.ViewList
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -161,13 +166,13 @@ fun PremiumFeatureCard(
 private fun mapFeatureIcon(iconName: String): ImageVector {
     return when (iconName) {
         "vibration" -> Icons.Default.Lock // Closest for shake
-        "directions_walk" -> androidx.compose.material.icons.filled.DirectionsWalk
-        "view_list" -> androidx.compose.material.icons.filled.ViewList
+        "directions_walk" -> Icons.Default.DirectionsWalk
+        "view_list" -> Icons.Default.ViewList
         "lock" -> Icons.Default.Lock
-        "timer" -> androidx.compose.material.icons.filled.Timer
-        "analytics" -> androidx.compose.material.icons.filled.Analytics
-        "palette" -> androidx.compose.material.icons.filled.Palette
-        "ad_free" -> androidx.compose.material.icons.filled.AdUnits
+        "timer" -> Icons.Default.Timer
+        "analytics" -> Icons.Default.Analytics
+        "palette" -> Icons.Default.Palette
+        "ad_free" -> Icons.Default.Lock // No AdUnits, using Lock as fallback
         else -> Icons.Default.Lock
     }
 }

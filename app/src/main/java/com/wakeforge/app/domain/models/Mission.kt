@@ -25,11 +25,11 @@ sealed class Mission(
      * @property problems List of [MathProblem] instances to solve.
      */
     data class MathMission(
-        val id: String = UUID.randomUUID().toString(),
-        val type: MissionType = MissionType.MATH,
-        val difficulty: MissionDifficulty,
-        val isTimed: Boolean = true,
-        val timeLimitMs: Long = 0L,
+        override val id: String = UUID.randomUUID().toString(),
+        override val type: MissionType = MissionType.MATH,
+        override val difficulty: MissionDifficulty,
+        override val isTimed: Boolean = true,
+        override val timeLimitMs: Long = 0L,
         val problems: List<MathProblem>
     ) : Mission(id, type, difficulty, isTimed, timeLimitMs)
 
@@ -41,11 +41,11 @@ sealed class Mission(
      * @property patternLength The number of cells in the pattern.
      */
     data class MemoryMission(
-        val id: String = UUID.randomUUID().toString(),
-        val type: MissionType = MissionType.MEMORY,
-        val difficulty: MissionDifficulty,
-        val isTimed: Boolean = true,
-        val timeLimitMs: Long = 0L,
+        override val id: String = UUID.randomUUID().toString(),
+        override val type: MissionType = MissionType.MEMORY,
+        override val difficulty: MissionDifficulty,
+        override val isTimed: Boolean = true,
+        override val timeLimitMs: Long = 0L,
         val gridSize: Int,
         val pattern: List<Int>,
         val patternLength: Int
@@ -58,11 +58,11 @@ sealed class Mission(
      * @property requiredAccuracy Minimum accuracy (0.0–1.0) to pass.
      */
     data class TypePhraseMission(
-        val id: String = UUID.randomUUID().toString(),
-        val type: MissionType = MissionType.TYPE_PHRASE,
-        val difficulty: MissionDifficulty,
-        val isTimed: Boolean = true,
-        val timeLimitMs: Long = 0L,
+        override val id: String = UUID.randomUUID().toString(),
+        override val type: MissionType = MissionType.TYPE_PHRASE,
+        override val difficulty: MissionDifficulty,
+        override val isTimed: Boolean = true,
+        override val timeLimitMs: Long = 0L,
         val phrase: String,
         val requiredAccuracy: Float = 0.95f
     ) : Mission(id, type, difficulty, isTimed, timeLimitMs)
@@ -75,11 +75,11 @@ sealed class Mission(
      * @property shakeThreshold Acceleration threshold to register a valid shake.
      */
     data class ShakeMission(
-        val id: String = UUID.randomUUID().toString(),
-        val type: MissionType = MissionType.SHAKE,
-        val difficulty: MissionDifficulty,
-        val isTimed: Boolean = true,
-        val timeLimitMs: Long = 0L,
+        override val id: String = UUID.randomUUID().toString(),
+        override val type: MissionType = MissionType.SHAKE,
+        override val difficulty: MissionDifficulty,
+        override val isTimed: Boolean = true,
+        override val timeLimitMs: Long = 0L,
         val requiredShakes: Int,
         val currentShakes: Int = 0,
         val shakeThreshold: Float = 2.5f
@@ -103,11 +103,11 @@ sealed class Mission(
      * @property currentSteps Number of steps registered so far.
      */
     data class StepMission(
-        val id: String = UUID.randomUUID().toString(),
-        val type: MissionType = MissionType.STEP,
-        val difficulty: MissionDifficulty,
-        val isTimed: Boolean = true,
-        val timeLimitMs: Long = 0L,
+        override val id: String = UUID.randomUUID().toString(),
+        override val type: MissionType = MissionType.STEP,
+        override val difficulty: MissionDifficulty,
+        override val isTimed: Boolean = true,
+        override val timeLimitMs: Long = 0L,
         val requiredSteps: Int,
         val currentSteps: Int = 0
     ) : Mission(id, type, difficulty, isTimed, timeLimitMs) {
